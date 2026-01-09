@@ -3,6 +3,7 @@ import json
 import joblib
 import pandas as pd
 from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import Ridge
 
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
@@ -36,8 +37,10 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 
 # ------------------ MODEL ------------------
-model = LinearRegression()
+# ------------------ MODEL ------------------
+model = Ridge(alpha=1.0)
 model.fit(X_train, y_train)
+
 
 
 # ------------------ EVALUATION ------------------
@@ -56,6 +59,7 @@ results = {
     "experiment_id": "EXP-01",
     "model": "Linear Regression",
     # "hyperparameters": "n_estimators=150, max_depth=15",
+    "hyperparameters": "alpha=1.0",
     "preprocessing": "None",
     "feature_selection": "All",
     "split": "75/25 (Stratified)",
