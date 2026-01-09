@@ -53,9 +53,9 @@ print(f"R2 Score: {r2}")
 joblib.dump(model, MODEL_PATH)
 
 results = {
-    "experiment_id": "EXP-08",
-    "model": "Random Forest",
-    "hyperparameters": "n_estimators=150, max_depth=15",
+    "experiment_id": "EXP-01",
+    "model": "Linear Regression",
+    # "hyperparameters": "n_estimators=150, max_depth=15",
     "preprocessing": "None",
     "feature_selection": "All",
     "split": "75/25 (Stratified)",
