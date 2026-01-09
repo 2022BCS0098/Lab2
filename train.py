@@ -56,8 +56,8 @@ print(f"R2 Score: {r2}")
 joblib.dump(model, MODEL_PATH)
 
 results = {
-    "experiment_id": "EXP-01",
-    "model": "Linear Regression",
+    "experiment_id": "EXP-02",
+    "model": "Ridge Regression",
     # "hyperparameters": "n_estimators=150, max_depth=15",
     "hyperparameters": "alpha=1.0",
     "preprocessing": "None",
