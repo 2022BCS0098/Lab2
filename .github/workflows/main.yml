@@ -30,11 +30,11 @@ jobs:
 
       - name: Write metrics to Job Summary
         run: |
-          echo "## 🧪 MLOps Lab – Experiment Results" >> $GITHUB_STEP_SUMMARY
+          echo "## Experiment Results" >> $GITHUB_STEP_SUMMARY
           echo "**Name:** Kushal" >> $GITHUB_STEP_SUMMARY
           echo "**Roll No:** 2022BCS0098" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "### 📊 Model Metrics" >> $GITHUB_STEP_SUMMARY
+          echo "### Metrics" >> $GITHUB_STEP_SUMMARY
           cat outputs/results.json >> $GITHUB_STEP_SUMMARY
 
       - name: Upload trained model
