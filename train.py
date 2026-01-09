@@ -38,7 +38,9 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 # ------------------ MODEL ------------------
 # ------------------ MODEL ------------------
-model = Ridge(alpha=1.0)
+model = RandomForestRegressor(
+    n_estimators=25, max_depth=13, random_state=42
+)
 model.fit(X_train, y_train)
 
 
@@ -56,10 +58,10 @@ print(f"R2 Score: {r2}")
 joblib.dump(model, MODEL_PATH)
 
 results = {
-    "experiment_id": "EXP-02",
-    "model": "Ridge Regression",
-    # "hyperparameters": "n_estimators=150, max_depth=15",
-    "hyperparameters": "alpha=1.0",
+    "experiment_id": "EXP-03",
+    "model": "Random Forest",
+    "hyperparameters": "n_estimators=25, max_depth=13",
+    # "hyperparameters": "alpha=1.0",
     "preprocessing": "None",
     "feature_selection": "All",
     "split": "75/25 (Stratified)",
