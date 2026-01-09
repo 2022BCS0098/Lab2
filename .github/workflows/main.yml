@@ -47,4 +47,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: evaluation-results
-          path: results.json
+          path: outputs/results.json
